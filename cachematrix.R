@@ -6,7 +6,7 @@ makeCacheMatrix <- function(x = matrix()) { ## sets x equal to an empty matrix
     Inv <<- NULL ## reset of inverse to Null
   }
   get <- function() x ## return the matrix
-  setInv <- function(solve) Inv <<- solve ## setInv overrides the NULL value of Inv to return inverse matrix
+  setInv <- function(solve) Inv <<- solve ## setInv replaces the NULL value of Inv to the calculated inverse matrix
   getInv <- function() Inv ## returns inverse matrix
   list(set = set, get = get, setInv = setInv, getInv = getInv) ## creates list of the functions
 } 
